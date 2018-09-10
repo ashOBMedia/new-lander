@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>New Lander</title>
+    <style type="text/css">
+    /* Delete browser margins and padding */
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      .bodycontainer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+      .top-bar {
+        width: 100%;
+        background-color: lightgrey;
+        height: 50px;
+        margin-bottom: 50px;
+      }
+      .top-bar h2 {
+        margin: 0;
+        text-align: center;
+        padding-top: 10px;
+      }
+      .link-container {
+        width: 80%;
+        border: 1px solid black;
+        margin: 0 auto;
+        height: auto;
+      }
+      .link {
+        border: 1px solid black;
+        margin: 10px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body class="body-container">
+    <div class="top-bar">
+      <h2>Searching for ...?</h2>
+    </div>
+    <div class="link-container">
+      <div class="link">
+        <p class="title"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="atitle adlink">{{ ad.title }}</a></p>
+				<p class="url"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="aurl adlink">{{ ad.displayUrl }}</a></p>
+				<p class="desc"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="adesc adlink">{{ ad.description }}</a></p>
+	    </div>
+      <div class="link"></div>
+      <div class="link"></div>
+      <div class="link"></div>
+      <div class="link"></div>
+    </div>
+  </body>
+</html>
