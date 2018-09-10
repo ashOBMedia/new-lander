@@ -29,15 +29,38 @@
       }
       .link-container {
         width: 60%;
-        border: 1px solid black;
         margin: 0 auto;
         height: auto;
       }
       .link {
-        border: 1px solid black;
         margin: 10px;
+        margin-left: 0px;
+        padding-left: 10px;
         height: auto;
+        flex: 1;
+        flex-grow: 12;
       }
+      .link-number {
+        background-color: grey;
+        color: white;
+        margin: 10px;
+        margin-right: 0px;
+        flex: 1;
+        height: auto;
+        text-align: center;
+        font-size: 237%;
+      }
+      .arrow {
+        flex: 1;
+        font-size: 237%;
+      }
+      .number-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border: 1px solid black;
+      }
+
     </style>
   </head>
   <body class="body-container">
@@ -45,81 +68,122 @@
       <h2>Searching for ...?</h2>
     </div>
     <div class="link-container">
-      <div class="link">
-        <p class="title"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="atitle adlink">{{ ad.title }}</a></p>
-				<p class="url"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="aurl adlink">{{ ad.displayUrl }}</a></p>
-				<p class="desc"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="adesc adlink">{{ ad.description }}</a></p>
-        <!--
-        {% if ad.extensions|length > 0 %}
-        {% for ext in ad.extensions %}
-        {% if ext._type == 'Ads/SiteLinkExtension' %}
-        {% if ext.siteLinks|length > 0 %}
-        {% endif %}
-        {% endif %}
-        {% endfor %}
-        {% endif %}
-        -->
-	    </div>
-      <div class="link">
-        <p class="title"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="atitle adlink">{{ ad.title }}</a></p>
-        <p class="url"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="aurl adlink">{{ ad.displayUrl }}</a></p>
-        <p class="desc"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="adesc adlink">{{ ad.description }}</a></p>
-        <!--
-        {% if ad.extensions|length > 0 %}
-        {% for ext in ad.extensions %}
-        {% if ext._type == 'Ads/SiteLinkExtension' %}
-        {% if ext.siteLinks|length > 0 %}
-        {% endif %}
-        {% endif %}
-        {% endfor %}
-        {% endif %}
-        -->
+      <div class="sponsored">
+        <h5>Sponsored Results</h5>
       </div>
-      <div class="link">
-        <p class="title"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="atitle adlink">{{ ad.title }}</a></p>
-        <p class="url"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="aurl adlink">{{ ad.displayUrl }}</a></p>
-        <p class="desc"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="adesc adlink">{{ ad.description }}</a></p>
-        <!--
-        {% if ad.extensions|length > 0 %}
-        {% for ext in ad.extensions %}
-        {% if ext._type == 'Ads/SiteLinkExtension' %}
-        {% if ext.siteLinks|length > 0 %}
-        {% endif %}
-        {% endif %}
-        {% endfor %}
-        {% endif %}
-        -->
+      <div class="number-container">
+        <div class="link-number">
+          <p>1</p>
+        </div>
+        <div class="link">
+          <p class="title"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="atitle adlink">{{ ad.title }}</a></p>
+  				<p class="url"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="aurl adlink">{{ ad.displayUrl }}</a></p>
+  				<p class="desc"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="adesc adlink">{{ ad.description }}</a></p>
+          <!--
+          {% if ad.extensions|length > 0 %}
+          {% for ext in ad.extensions %}
+          {% if ext._type == 'Ads/SiteLinkExtension' %}
+          {% if ext.siteLinks|length > 0 %}
+          {% endif %}
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+          -->
+  	    </div>
+        <div class="arrow">
+          <p>&#8811;</p>
+        </div>
       </div>
-      <div class="link">
-        <p class="title"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="atitle adlink">{{ ad.title }}</a></p>
-        <p class="url"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="aurl adlink">{{ ad.displayUrl }}</a></p>
-        <p class="desc"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="adesc adlink">{{ ad.description }}</a></p>
-        <!--
-        {% if ad.extensions|length > 0 %}
-        {% for ext in ad.extensions %}
-        {% if ext._type == 'Ads/SiteLinkExtension' %}
-        {% if ext.siteLinks|length > 0 %}
-        {% endif %}
-        {% endif %}
-        {% endfor %}
-        {% endif %}
-        -->
+      <div class="number-container">
+        <div class="link-number">
+          <p>2</p>
+        </div>
+        <div class="link">
+          <p class="title"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="atitle adlink">{{ ad.title }}</a></p>
+          <p class="url"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="aurl adlink">{{ ad.displayUrl }}</a></p>
+          <p class="desc"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="adesc adlink">{{ ad.description }}</a></p>
+          <!--
+          {% if ad.extensions|length > 0 %}
+          {% for ext in ad.extensions %}
+          {% if ext._type == 'Ads/SiteLinkExtension' %}
+          {% if ext.siteLinks|length > 0 %}
+          {% endif %}
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+          -->
+        </div>
       </div>
-      <div class="link">
-        <p class="title"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="atitle adlink">{{ ad.title }}</a></p>
-        <p class="url"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="aurl adlink">{{ ad.displayUrl }}</a></p>
-        <p class="desc"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="adesc adlink">{{ ad.description }}</a></p>
-        <!--
-        {% if ad.extensions|length > 0 %}
-        {% for ext in ad.extensions %}
-        {% if ext._type == 'Ads/SiteLinkExtension' %}
-        {% if ext.siteLinks|length > 0 %}
-        {% endif %}
-        {% endif %}
-        {% endfor %}
-        {% endif %}
-        -->
+      <div class="number-container">
+        <div class="link-number">
+          <p>3</p>
+        </div>
+        <div class="link">
+          <p class="title"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="atitle adlink">{{ ad.title }}</a></p>
+          <p class="url"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="aurl adlink">{{ ad.displayUrl }}</a></p>
+          <p class="desc"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="adesc adlink">{{ ad.description }}</a></p>
+          <!--
+          {% if ad.extensions|length > 0 %}
+          {% for ext in ad.extensions %}
+          {% if ext._type == 'Ads/SiteLinkExtension' %}
+          {% if ext.siteLinks|length > 0 %}
+          {% endif %}
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+          -->
+        </div>
       </div>
+      <div class="number-container">
+        <div class="link-number">
+          <p>4</p>
+        </div>
+        <div class="link">
+          <p class="title"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="atitle adlink">{{ ad.title }}</a></p>
+          <p class="url"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="aurl adlink">{{ ad.displayUrl }}</a></p>
+          <p class="desc"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="adesc adlink">{{ ad.description }}</a></p>
+          <!--
+          {% if ad.extensions|length > 0 %}
+          {% for ext in ad.extensions %}
+          {% if ext._type == 'Ads/SiteLinkExtension' %}
+          {% if ext.siteLinks|length > 0 %}
+          {% endif %}
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+          -->
+        </div>
+      </div>
+      <div class="number-container">
+        <div class="link-number">
+          <p>5</p>
+        </div>
+        <div class="link">
+          <p class="title"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="atitle adlink">{{ ad.title }}</a></p>
+          <p class="url"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="aurl adlink">{{ ad.displayUrl }}</a></p>
+          <p class="desc"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="adesc adlink">{{ ad.description }}</a></p>
+          <!--
+          {% if ad.extensions|length > 0 %}
+          {% for ext in ad.extensions %}
+          {% if ext._type == 'Ads/SiteLinkExtension' %}
+          {% if ext.siteLinks|length > 0 %}
+          {% endif %}
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+          -->
+        </div>
+      </div>
+      <form method="get" action="https://www.bing.com/search">
+        <div style="margin: 0 auto;padding:4px;">
+        <table border="0" align="center" cellpadding="0">
+        <tr><td>
+        <input type="text"   name="q" size="25"
+        maxlength="255" value="" />
+        <input type="submit" value="Bing Search" /></td></tr>
+        </table>
+        </div>
+      </form>
     </div>
   </body>
 </html>
