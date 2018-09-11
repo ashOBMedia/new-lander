@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>New Lander</title>
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Crimson+Text|Roboto" rel="stylesheet">
     <style type="text/css">
     /* Delete browser margins and padding */
       html, body {
@@ -18,47 +19,73 @@
       }
       .top-bar {
         width: 100%;
-        background-color: lightgrey;
+        background-color: #1d0a33;
         height: 50px;
         margin-bottom: 50px;
+        color: white;
       }
       .top-bar h2 {
         margin: 0;
         text-align: center;
         padding-top: 10px;
+        font-family: 'Roboto', 'Arvo','Crimson Text';
+        font-size: 16.5px;
       }
       .link-container {
-        width: 60%;
+        width: 75%;
         margin: 0 auto;
         height: auto;
       }
       .link {
-        margin: 10px;
-        margin-left: 0px;
         padding-left: 10px;
-        height: auto;
         flex: 1;
         flex-grow: 12;
       }
       .link-number {
-        background-color: grey;
+        background-color: #251933;
         color: white;
-        margin: 10px;
-        margin-right: 0px;
         flex: 1;
-        height: auto;
+        line-height: 13vh;
+        font-family: sans-serif;
+        font-weight: 500;
         text-align: center;
-        font-size: 237%;
+        font-size: 30px;
       }
       .arrow {
         flex: 1;
-        font-size: 237%;
+        font-size: 6vh;
+        padding-left: 15px;
+        margin: auto;
+        border-left: 1px dotted grey;
       }
       .number-container {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        align-items: stretch;
+        margin: 20px;
         border: 1px solid black;
+        font-family:'Roboto', 'Arvo','Crimson Text';
+      }
+      .siteLinks li {
+        display: inline;
+        text-decoration: none;
+        font-size: 10px;
+        margin: 5px;
+        border: 1px solid grey;
+        padding: 5px;
+      }
+      .sponsored {
+        margin: 20px;
+      }
+      .title {
+        font-size: 25px;
+      }
+      .url {
+        font-size: 12px;
+      }
+      .desc {
+        font-size: 15px;
       }
 
     </style>
@@ -84,6 +111,20 @@
           {% for ext in ad.extensions %}
           {% if ext._type == 'Ads/SiteLinkExtension' %}
           {% if ext.siteLinks|length > 0 %}
+          -->
+          <ul class="siteLinks">
+            <!--
+          {% for sl in ext.siteLinks %}
+          -->
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
+          <!--
+          {% endfor %}
+          -->
+          </ul>
+          <!--
           {% endif %}
           {% endif %}
           {% endfor %}
@@ -107,11 +148,28 @@
           {% for ext in ad.extensions %}
           {% if ext._type == 'Ads/SiteLinkExtension' %}
           {% if ext.siteLinks|length > 0 %}
+          -->
+          <ul class="siteLinks">
+            <!--
+          {% for sl in ext.siteLinks %}
+          -->
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
+          <!--
+          {% endfor %}
+          -->
+          </ul>
+          <!--
           {% endif %}
           {% endif %}
           {% endfor %}
           {% endif %}
           -->
+        </div>
+        <div class="arrow">
+          <p>&#8811;</p>
         </div>
       </div>
       <div class="number-container">
@@ -127,11 +185,28 @@
           {% for ext in ad.extensions %}
           {% if ext._type == 'Ads/SiteLinkExtension' %}
           {% if ext.siteLinks|length > 0 %}
+          -->
+          <ul class="siteLinks">
+            <!--
+          {% for sl in ext.siteLinks %}
+          -->
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
+          <!--
+          {% endfor %}
+          -->
+          </ul>
+          <!--
           {% endif %}
           {% endif %}
           {% endfor %}
           {% endif %}
           -->
+        </div>
+        <div class="arrow">
+          <p>&#8811;</p>
         </div>
       </div>
       <div class="number-container">
@@ -147,11 +222,28 @@
           {% for ext in ad.extensions %}
           {% if ext._type == 'Ads/SiteLinkExtension' %}
           {% if ext.siteLinks|length > 0 %}
+          -->
+          <ul class="siteLinks">
+            <!--
+          {% for sl in ext.siteLinks %}
+          -->
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
+          <!--
+          {% endfor %}
+          -->
+          </ul>
+          <!--
           {% endif %}
           {% endif %}
           {% endfor %}
           {% endif %}
           -->
+        </div>
+        <div class="arrow">
+          <p>&#8811;</p>
         </div>
       </div>
       <div class="number-container">
@@ -167,11 +259,28 @@
           {% for ext in ad.extensions %}
           {% if ext._type == 'Ads/SiteLinkExtension' %}
           {% if ext.siteLinks|length > 0 %}
+          -->
+          <ul class="siteLinks">
+            <!--
+          {% for sl in ext.siteLinks %}
+          -->
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
+          <!--
+          {% endfor %}
+          -->
+          </ul>
+          <!--
           {% endif %}
           {% endif %}
           {% endfor %}
           {% endif %}
           -->
+        </div>
+        <div class="arrow">
+          <p>&#8811;</p>
         </div>
       </div>
       <form method="get" action="https://www.bing.com/search">
