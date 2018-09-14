@@ -37,7 +37,7 @@
         height: auto;
       }
       .link {
-        padding-left: 10px;
+        margin-left: 50px;
         flex: 1;
         flex-grow: 12;
       }
@@ -65,15 +65,20 @@
         align-items: stretch;
         margin: 20px;
         border: 1px solid grey;
-        font-family:'Roboto', 'Arvo','Crimson Text';
+        font-family:'Roboto', 'Arvo','Crimson Text', Open sans;
+      }
+      .siteLinks {
+        padding-left: 0;
       }
       .siteLinks li {
         display: inline;
-        text-decoration: none;
-        font-size: 10px;
-        margin: 5px;
+        font-size: 11px;
+        margin-right: 10px;
         border: 1px solid grey;
         padding: 5px;
+      }
+      .link a {
+        text-decoration: none;
       }
       .sponsored {
         margin: 20px;
@@ -103,9 +108,9 @@
           <p>1</p>
         </div>
         <div class="link">
-          <p class="title"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="atitle adlink">{{ ad.title }}</a></p>
-  				<p class="url"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="aurl adlink">{{ ad.displayUrl }}</a></p>
-  				<p class="desc"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="adesc adlink">{{ ad.description }}</a></p>
+          <p class="title"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="atitle adlink">Save On Pools & Hot Tubs Now - Official Lowe's® Website</a></p>
+  				<p class="url"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="aurl adlink">www.lowes.com/pools/hottubs</a></p>
+  				<p class="desc"><a href="{{ ad.clickurl|e }}" data-suffix="{{ ad.urlPingSuffix }}" target="_blank" class="adesc adlink">Visit Lowe's® Today And Save On A Huge Selection Of Pools & Hot Tubs & More!</a></p>
           <!--
           {% if ad.extensions|length > 0 %}
           {% for ext in ad.extensions %}
@@ -116,10 +121,10 @@
             <!--
           {% for sl in ext.siteLinks %}
           -->
-           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
-           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
-           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
-           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">{{ sl.text }}</a></li>
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">Customize Your Above Ground Pool</a></li>
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">Now & Save + Free Shipping!</a></li>
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">Huge Selection of Semi-Inground</a></li>
+           <li><a class="adlink" data-suffix="{{ sl.linkPingSuffix }}" href="{{ sl.clickurl|e }}">Swimming Pools To Choose From!</a></li>
           <!--
           {% endfor %}
           -->
